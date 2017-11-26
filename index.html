@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Bouncy</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<meta name="description" content="" />
+	<link rel="icon" href="favicon.png"/>
+	<link rel="stylesheet" href="css/normalize.css" />
+	<link rel="stylesheet" href="css/layout.css" />
+	<link rel="stylesheet" type="text/css" href="slick/slick.css"/>
+	<link rel="stylesheet" type="text/css" href="slick/slick-theme.css"/>
+	<link rel="stylesheet" href="css/style.css" />
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet">
+</head>
+<body>
+	<svg style="position: absolute; width: 0; height: 0; overflow: hidden;" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+		<defs>
+			<symbol id="icon-facebook" viewBox="0 0 32 32">
+				<title>facebook</title>
+				<path fill="#3b5998" style="fill: var(--color1, #3b5998)" d="M16 0.245c8.7 0 15.754 7.055 15.754 15.755 0 8.699-7.054 15.753-15.754 15.753s-15.754-7.054-15.754-15.753c0-8.7 7.054-15.755 15.754-15.755z"></path>
+				<path fill="#fff" style="fill: var(--color2, #fff)" d="M17.918 11.090h2.031v-2.999h-2.386v0.011c-2.891 0.102-3.484 1.728-3.536 3.436h-0.006v1.497h-1.968v2.937h1.968v7.873h2.969v-7.873h2.431l0.468-2.937h-2.898v-0.905c0-0.577 0.383-1.040 0.929-1.040z"></path>
+			</symbol>
+			<symbol id="icon-instagramm" viewBox="0 0 32 32">
+				<title>instagramm</title>
+				<path fill="#3f729b" style="fill: var(--color3, #3f729b)" d="M16 0.245c8.7 0 15.754 7.054 15.754 15.755 0 8.699-7.054 15.753-15.754 15.753s-15.754-7.054-15.754-15.753c0-8.702 7.054-15.755 15.754-15.755z"></path>
+				<path fill="#fff" style="fill: var(--color2, #fff)" d="M21.438 7.135h-10.875c-1.892 0.002-3.424 1.535-3.426 3.426v10.877c0.002 1.891 1.535 3.424 3.426 3.425h10.875c1.891-0.001 3.424-1.534 3.426-3.425v-10.876c-0.002-1.892-1.535-3.424-3.426-3.426h-0zM22.517 9.118l0.388-0.001v2.943l-2.964 0.009-0.010-2.942 2.586-0.009zM16 13.034c2.458 0 2.966 2.308 2.966 2.966-0.003 1.637-1.33 2.962-2.966 2.965h-0c-1.637-0.002-2.963-1.328-2.966-2.965v-0c0-0.658 0.508-2.966 2.966-2.966zM22.922 21.222c0 0.937-0.763 1.698-1.7 1.698h-10.475c-0.938-0.001-1.698-0.761-1.7-1.698v-7.196h2.462c-0.228 0.562-0.357 1.329-0.357 1.974 0.004 2.676 2.172 4.844 4.848 4.847h0c2.676-0.003 4.844-2.171 4.847-4.846v-0c0-0.645-0.129-1.412-0.357-1.974h2.432v7.196z"></path>
+			</symbol>
+			<symbol id="icon-linkedin" viewBox="0 0 32 32">
+				<title>linkedin</title>
+				<path fill="#0e76a8" style="fill: var(--color4, #0e76a8)" d="M16 0.245c8.7 0 15.754 7.054 15.754 15.755 0 8.699-7.054 15.753-15.754 15.753s-15.754-7.054-15.754-15.753c0-8.702 7.054-15.755 15.754-15.755z"></path>
+				<path fill="#fff" style="fill: var(--color2, #fff)" d="M20.933 21.892v-5.361c0-1.1-0.318-2.201-1.611-2.201-1.295 0-2.327 1.1-2.327 2.226v5.335h-2.961v-9.865h2.961v1.369c0.908-1.154 2.19-1.678 3.621-1.678 1.433 0 3.269 0.715 3.269 4.592v5.582h-2.951zM9.122 12.058h2.951v9.834h-2.951v-9.834zM10.585 11.076c-0.816 0-1.477-0.661-1.477-1.477s0.661-1.477 1.477-1.477v0c0.816 0 1.477 0.661 1.477 1.477s-0.661 1.477-1.477 1.477v0z"></path>
+			</symbol>
+			<symbol id="icon-twitter" viewBox="0 0 32 32">
+				<title>twitter</title>
+				<path fill="#26a6d1" style="fill: var(--color5, #26a6d1)" d="M16 0.245c8.7 0 15.754 7.055 15.754 15.755 0 8.699-7.054 15.753-15.754 15.753s-15.754-7.054-15.754-15.753c0-8.7 7.054-15.755 15.754-15.755z"></path>
+				<path fill="#fff" style="fill: var(--color2, #fff)" d="M25.849 10.858c-0.643 0.285-1.388 0.492-2.169 0.585l-0.037 0.004c0.789-0.46 1.386-1.177 1.681-2.035l0.008-0.026c-0.703 0.412-1.52 0.725-2.389 0.895l-0.050 0.008c-0.707-0.726-1.695-1.177-2.787-1.177-0.005 0-0.010 0-0.015 0h0.001c-2.121 0-3.84 1.669-3.84 3.727 0 0.292 0.034 0.576 0.1 0.849-3.179-0.149-5.986-1.623-7.901-3.878l-0.013-0.016c-0.326 0.535-0.519 1.181-0.519 1.873 0 0 0 0 0 0v0c0 1.294 0.678 2.434 1.708 3.102-0.64-0.020-1.236-0.19-1.76-0.476l0.021 0.010v0.047c0 1.804 1.323 3.311 3.079 3.653-0.303 0.083-0.651 0.131-1.010 0.131-0.256 0-0.507-0.024-0.749-0.071l0.025 0.004c0.489 1.481 1.906 2.558 3.586 2.587-1.302 0.996-2.954 1.596-4.746 1.596-0.008 0-0.016 0-0.024-0h0.001c-0.31 0-0.615-0.018-0.916-0.053 1.666 1.051 3.693 1.675 5.866 1.675 0.007 0 0.013 0 0.020-0h-0.001c7.061 0 10.922-5.679 10.922-10.602 0-0.161-0.002-0.324-0.010-0.482 0.753-0.532 1.388-1.171 1.899-1.905l0.017-0.025z"></path>
+			</symbol>
+			<symbol id="icon-vimeo" viewBox="0 0 32 32">
+				<title>vimeo</title>
+				<path fill="#86c9ef" style="fill: var(--color6, #86c9ef)" d="M16 0.245c8.7 0 15.754 7.055 15.754 15.755 0 8.699-7.054 15.753-15.754 15.753s-15.754-7.054-15.754-15.753c0-8.7 7.054-15.755 15.754-15.755z"></path>
+				<path fill="#fff" style="fill: var(--color2, #fff)" d="M7.138 13.045c1.473-1.177 3.568-3.758 5.201-3.758 1.632 0 2.032 1.926 2.255 3.675 0.224 1.748 0.866 5.57 1.728 5.57 0.865 0 2.833-3.381 2.721-4.688-0.112-1.306-1.536-1.111-2.32-0.735 0.72-2.615 2.384-4.002 4.512-4.002s2.641 1.503 2.641 3.349c0 2.81-5.697 11.419-9.137 11.419-2.129 0-2.656-3.136-3.088-4.689-0.433-1.551-1.281-5.62-2.273-5.881-0.385-0.065-1.472 0.8-1.472 0.8l-0.768-1.061z"></path>
+			</symbol>
+		</defs>
+	</svg>
+	<header class="ba-header">
+		<div class="ba-container">
+			<div class="ba-header-top">
+				<div class="ba-header__logo">
+					<a href="#">
+						<img src="img/logo.png" alt="Logo">
+					</a>
+				</div>
+				<ul class="ba-header-menu">
+					<li class="ba-header-menu__item ba-header-menu__item--active"><a href="#">Hello</a></li>
+					<li class="ba-header-menu__item"><a href="#portfolio">Portfolio</a></li>
+					<li class="ba-header-menu__item"><a href="#team">Team</a></li>
+					<li class="ba-header-menu__item"><a href="#contact">Contact</a></li>
+				</ul>
+			</div>
+			<div class="ba-header-main">
+				<div class="ba-header-text">
+					<p class="ba-header-text__title">We Are Code Cafe</p>
+					<p class="ba-header-text__desc">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum</p>
+				</div>
+				<a href="#portfolio">
+					<div class="ba-header__scroll">
+						<img src="img/down.png" alt="Scroll">
+					</div>
+				</a>
+			</div>
+		</div>
+	</header>
+	<main>
+		<section id="portfolio" class="portfolio">
+			<div class="ba-container">
+				<h2 class="section-title">THE PORTFOLIO</h2>
+				<p class="section-desc">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium</p>
+				<ul class="portfolio-selector">
+					<li class="portfolio-selector__item portfolio-selector__item--active" id="all-works_filter">All works</li>
+					<li class="portfolio-selector__item" id="print_filter">Print</li>
+					<li class="portfolio-selector__item" id="branding_filter">Branding</li>
+					<li class="portfolio-selector__item" id="web_filter">Web</li>
+					<li class="portfolio-selector__item" id="html_filter">HTML</li>
+				</ul>
+				<div class="portfolio-grid">
+					<img src="img/works/layer86.jpg" alt="Work" class="branding-item">
+					<img src="img/works/layer87.jpg" alt="Work" class="print-item">
+					<img src="img/works/layer89.jpg" alt="Work" class="web-item">
+					<img src="img/works/layer90.jpg" alt="Work" class="html-item">
+					<img src="img/works/layer91.jpg" alt="Work" class="web-item">
+					<img src="img/works/layer92.jpg" alt="Work" class="branding-item">
+					<img src="img/works/layer93.jpg" alt="Work" class="print-item">
+					<img src="img/works/layer94.jpg" alt="Work" class="html-item">
+					<img src="img/works/layer95.jpg" alt="Work" class="web-item">
+					<img src="img/works/layer96.jpg" alt="Work" class="print-item">
+					<img src="img/works/layer97.jpg" alt="Work" class="branding-item">
+					<img src="img/works/layer91.jpg" alt="Work" class="html-item">
+				</div>
+			</div>
+		</section>
+		<section id="team" class="team">
+			<div class="ba-container">
+				<h2 class="section-title">THE TEAM</h2>
+				<p class="section-desc">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium</p>
+				<div class="slider">
+					<div>
+						<div class="slider-image">
+							<img src="img/team-member.jpg" alt="Team member">
+							<div class="slider-image__social">
+								<a href="#"><svg class="icon icon-facebook"><use xlink:href="#icon-facebook"></use></svg></a>
+								<a href="#"><svg class="icon icon-twitter"><use xlink:href="#icon-twitter"></use></svg></a>
+								<a href="#"><svg class="icon icon-instagramm"><use xlink:href="#icon-instagramm"></use></svg></a>
+							</div>
+						</div>
+						<div class="slider-desc">
+							<p class="slider-desc_name">Abdullah Noman</p>
+							<p class="slider-desc_position">Creative Director, Code Cafe</p>
+							<p class="slider-desc_about">
+								At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium. At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium. At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium. At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium. At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium. 
+							</p>
+						</div>
+					</div>
+					<div>
+						<div class="slider-image">
+							<img src="img/team-member.jpg" alt="Team member">
+							<div class="slider-image__social">
+								<a href="#"><svg class="icon icon-facebook"><use xlink:href="#icon-facebook"></use></svg></a>
+								<a href="#"><svg class="icon icon-twitter"><use xlink:href="#icon-twitter"></use></svg></a>
+								<a href="#"><svg class="icon icon-instagramm"><use xlink:href="#icon-instagramm"></use></svg></a>
+							</div>
+						</div>
+						<div class="slider-desc">
+							<p class="slider-desc_name">Abdullah Noman</p>
+							<p class="slider-desc_position">Creative Director, Code Cafe</p>
+							<p class="slider-desc_about">
+								At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium. At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium. At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium. At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium. At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium. 
+							</p>
+						</div>
+					</div>
+					<div>
+						<div class="slider-image">
+							<img src="img/team-member.jpg" alt="Team member">
+							<div class="slider-image__social">
+								<a href="#"><svg class="icon icon-facebook"><use xlink:href="#icon-facebook"></use></svg></a>
+								<a href="#"><svg class="icon icon-twitter"><use xlink:href="#icon-twitter"></use></svg></a>
+								<a href="#"><svg class="icon icon-instagramm"><use xlink:href="#icon-instagramm"></use></svg></a>
+							</div>
+						</div>
+						<div class="slider-desc">
+							<p class="slider-desc_name">Abdullah Noman</p>
+							<p class="slider-desc_position">Creative Director, Code Cafe</p>
+							<p class="slider-desc_about">
+								At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium. At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium. At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium. At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium. At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium. 
+							</p>
+						</div>
+					</div>
+				</div>
+				<div style="clear: both"></div>
+			</div>
+		</section>
+		<section class="loved">
+			<h2 class="loved-title">Already Loved Us? Let’s talk!</h2>
+			<a href="#contact" class="loved-button">Contact Us</a>
+		</section>
+		<section id="testimonials" class="testimonials">
+			<h2 class="section-title">testimonials</h2>
+			<p class="section-desc">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium</p>
+			<div class="slider">
+				<div>
+					<img src="img/testimonial.jpg" alt="Author" class="author-img">
+					<div class="right">
+						<p class="text">
+							At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia.
+						</p>
+						<p class="author">
+							PARTHO
+						</p>
+						<p class="position">
+							FOUNDER, ARTWAYS BD
+						</p>
+					</div>
+				</div>
+				<div>
+					<img src="img/testimonial.jpg" alt="Author" class="author-img">
+					<div class="right">
+						<p class="text">
+							At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia.
+						</p>
+						<p class="author">
+							PARTHO
+						</p>
+						<p class="position">
+							FOUNDER, ARTWAYS BD
+						</p>
+					</div>
+				</div>
+				<div>
+					<img src="img/testimonial.jpg" alt="Author" class="author-img">
+					<div class="right">
+						<p class="text">
+							At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia.
+						</p>
+						<p class="author">
+							PARTHO
+						</p>
+						<p class="position">
+							FOUNDER, ARTWAYS BD
+						</p>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section id="contact" class="contact">
+			<h2 class="section-title">Contact us</h2>
+			<p class="section-desc">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium</p>
+			<div id="map"></div>
+		</section>
+	</main>
+	<footer class="ba-footer">
+		<div class="ba-container">
+			<img src="img/logo-dark.png" alt="Logo">
+			<p class="ba-footer__copyright">Copyright 2015. All rights Reserved</p>
+			<div class="ba-footer-icons">
+				<a href="#"><svg class="icon icon-facebook"><use xlink:href="#icon-facebook"></use></svg></a>
+				<a href="#"><svg class="icon icon-twitter"><use xlink:href="#icon-twitter"></use></svg></a>
+				<a href="#"><svg class="icon icon-linkedin"><use xlink:href="#icon-linkedin"></use></svg></a>
+				<a href="#"><svg class="icon icon-instagramm"><use xlink:href="#icon-instagramm"></use></svg></a>
+				<a href="#"><svg class="icon icon-vimeo"><use xlink:href="#icon-vimeo"></use></svg></a>
+			</div>
+		</div>
+	</footer>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js"></script>
+	<script type="text/javascript" src="slick/slick.min.js"></script>
+	<script src="script.js"></script>
+	<script async defer
+	src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDuufyxmyvdMn-m5OMACF1IUX2ffs-rCyw&callback=initMap">
+</script>
+</body>
+</html>
