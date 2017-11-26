@@ -254,7 +254,10 @@ a {
     margin: 0 auto;
     background: #fff;
     box-shadow: 0.7px 0.7px 0 0 rgba(0, 0, 0, 0.05);
-    padding: 0; }
+    padding: 0;
+    position: relative; }
+    .testimonials .slider .slick-dots {
+      bottom: 22px; }
     .testimonials .slider div {
       padding: 20px 40px 20px 20px;
       width: 100%; }
